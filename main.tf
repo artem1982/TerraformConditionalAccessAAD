@@ -13,7 +13,7 @@ resource "azuread_conditional_access_policy" "CP01" {
         
 
     applications {
-      included_applications = ["All"]
+      included_applications = ["all"]
       excluded_applications = []
     }
     
@@ -27,7 +27,7 @@ resource "azuread_conditional_access_policy" "CP01" {
     }
 
     users {
-      included_users = ["All"]
+      included_users = ["all"]
       excluded_users = []
       excluded_groups = [var.emergency_admins]
     }
@@ -50,7 +50,7 @@ resource "azuread_conditional_access_policy" "CP02" {
     user_risk_levels    = []
 
     applications {
-      included_applications = ["All"]
+      included_applications = ["all"]
       excluded_applications = []
     }
 
@@ -66,7 +66,7 @@ resource "azuread_conditional_access_policy" "CP02" {
 
     users {
       included_users = []
-      included_roles = [var.admin_roles]
+      included_roles = [var.global_admin_role]
       excluded_users = []
       excluded_groups = [var.emergency_admins]
     }
@@ -84,13 +84,13 @@ resource "azuread_conditional_access_policy" "CP03" {
   state        = "enabledForReportingButNotEnforced"
 
   conditions {
-    client_app_types    = ["All"]
+    client_app_types    = ["all"]
     sign_in_risk_levels = []
     user_risk_levels    = []
         
 
     applications {
-      included_applications = ["All"]
+      included_applications = ["all"]
       excluded_applications = []
     }
     
@@ -104,7 +104,7 @@ resource "azuread_conditional_access_policy" "CP03" {
     }
 
     users {
-      included_users = ["All"]
+      included_users = ["all"]
       excluded_users = []
       excluded_groups = [var.emergency_admins]
     }
