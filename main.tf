@@ -58,8 +58,10 @@ resource "azuread_conditional_access_policy" "CP02" {
       included_locations = []
       excluded_locations = []
     }
-
-    
+    platforms {
+      included_platforms = ["all"]
+      excluded_platforms = []
+    }
     users {
       included_users = []
       included_roles = [var.global_admin_role]
