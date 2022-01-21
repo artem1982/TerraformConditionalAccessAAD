@@ -45,7 +45,7 @@ resource "azuread_conditional_access_policy" "CP02" {
   state        = "enabledForReportingButNotEnforced" 
 
   conditions {
-    client_app_types    = []
+    client_app_types    = ["all"]
     sign_in_risk_levels = []
     user_risk_levels    = []
 
