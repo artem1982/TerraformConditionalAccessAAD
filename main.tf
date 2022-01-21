@@ -42,7 +42,7 @@ resource "azuread_conditional_access_policy" "CP01" {
 
 resource "azuread_conditional_access_policy" "CP02" {
   display_name = "CP02-Require-MFAAuthenticationforadmin-AllAps-Everywhere"
-  state        = "enabledForReportingButNotEnforced"
+  state        = "enabledForReportingButNotEnforced" 
 
   conditions {
     client_app_types    = []
@@ -59,11 +59,7 @@ resource "azuread_conditional_access_policy" "CP02" {
       excluded_locations = []
     }
 
-    platforms {
-      included_platforms = []
-      excluded_platforms = []
-    }
-
+    
     users {
       included_users = []
       included_roles = [var.global_admin_role]
