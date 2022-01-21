@@ -4,7 +4,7 @@ provider "azuread" {
 
 resource "azuread_conditional_access_policy" "CP01" {
   display_name = "CP01-Block-LegacyAuthentication-AllAps-Everywhere"
-  state        = "enabledForReportingButNotEnforced"
+  state        = "enabled"
 
   conditions {
     client_app_types    = ["exchangeActiveSync","other"]
