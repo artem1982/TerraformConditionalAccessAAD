@@ -3,7 +3,7 @@ provider "azuread" {
 }
 
 resource "azuread_conditional_access_policy" "CP01" {
-  display_name = "CP01-Block-LegacyAuthentication-AllAps-Everywherev3"
+  display_name = "CP01-Block-LegacyAuthentication-AllAps-Everywherev4"
   state        = "enabled"
 
   conditions {
